@@ -1,7 +1,9 @@
 
 ### Ui design
 ```
- [ ] side bar  
+ [x] side bar  
+ [-] buttons
+ [x] logo
 
  [ ] home page
  [ ] search bar

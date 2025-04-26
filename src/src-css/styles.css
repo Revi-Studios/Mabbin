@@ -1,11 +1,13 @@
 :root{
   --color: #d0d0d0;
+  --black: black;
+  --white: white;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   margin: 0px;
-  background-color: black;
+  background-color: var(--black);
   color: var(--color);
   text-decoration: none;
   overflow: hidden;
@@ -20,35 +22,28 @@ main {
 
 
 a {
-  background-color: black;
   color: var(--color);
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 5px 10px;
   display: flex;
   max-width: 76px;
   margin: 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
   align-items: center;
+}
 
+a.selected {
+  background-color: var(--black);
+}
+
+span {
+  margin-right: 8px;
+  margin-left: 2px;
 }
 
 a:hover {
   background-color: #111111
-}
-
-.navbar {
-  background-color: black;
-  border-radius: 20px;
-  padding: 0px;
-  flex-direction: row;
-  display: flex;
-}
-
-.navbar a {
-  background-color:  lrgb(35, 35, 35);
-  margin: 10px;
-  
 }
 
 .m-button {
@@ -91,16 +86,23 @@ div.rm {
 }
 
 a.round-buttons {
-  padding: 10px 10px;
+  padding: 5px 10px;
   border-radius: 50px;
+  background-color: var(--black);
+}
+
+span.round-buttons {
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 div.titlebar {
-position: top;
-width: 100vw;
-height: 30px;
-position: sticky;
-margin: 0px;
+  position: top;
+  width: 100vw;
+  height: 30px;
+  position: sticky;
+  margin: 0px;
+  background-color: #151515;
 }
 
 aside {
@@ -109,4 +111,16 @@ aside {
   position: right;
   width: 200px;
   border-right: 1px solid #2f2f2f;
+  display: flex;
+  flex-direction: column;
+}
+
+p.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+div {
+  align-content: center;
 }
