@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mabbin</title>
+
+    <!-- Web Imports -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src-css/styles.css">
+
+    <!-- Local imports -->
+    <link rel="stylesheet" href="/src-styles/root.css">
+    <link rel="stylesheet" href="/src-styles/default.css">
+    <link rel="stylesheet" href="/src-styles/classes.css">
 </head>
-<body>
 
-  <div class="titlebar" data-tauri-drag-region ></div>
+<body x-data="{ currentPage: 'home'}">
 
-  <main>
-    <aside>
-        <div style="display: flex; padding-left: 10px;">
-            <img src="mabbin-normal.svg" alt="" width="50">
-            <p class="title">Mabbin</p>
-        </div>
+    <div class="titlebar" data-tauri-drag-region></div>
+
+    <main>
+        <aside>
+            <div style="display: flex; padding-left: 10px;">
+                <img src="mabbin-normal.svg" alt="" width="50">
+                <p class="title">Mabbin</p>
+            </div>
             <a class="ex-button"><span class="material-symbols-rounded">add</span>New</a>
             <div>
-                <a class="full-button selected"><span class="material-symbols-rounded">home</span>Home</a>
-                <a><span class="material-symbols-rounded">folder</span>Folder</a>
-                <a><span class="material-symbols-rounded">search_activity</span>Recent</a>
+                <a href="#" @click.prevent="currentPage = 'home'" :class="{ 'active': currentPage === 'home' }"
+                    class="full-button selected"><span class="material-symbols-rounded">home</span>Home</a>
+                <a href="#" @click.prevent="currentPage = 'folder" :class="{ 'active: currentPage === 'folder' }"><span
+                        class="material-symbols-rounded">folder</span>Folder</a>
+                <a href="#" @click.prevent="currentPage = 'recent'" :class="{ 'active: currentPage === 'recent' }"><span
+                        class="material-symbols-rounded">search_activity</span>Recent</a>
             </div>
-            
+
             <div style="bottom: 0px; position: absolute;">
-                <a class="round-buttons"><span class="material-symbols-rounded round-buttons">settings</span></a>
-                <a class="round-buttons"><span class="material-symbols-rounded round-buttons">logout</span></a>    
+                <a href="#" class="round-buttons"><span
+                        class="material-symbols-rounded round-buttons">settings</span></a>
+                <a href="#" class="round-buttons"><span class="material-symbols-rounded round-buttons">logout</span></a>
             </div>
+        </aside>
 
-    </aside>
+        <div class="page" :class="{ active: currentPage === 'home'}">
+            <p>Home</p>
 
-      
-  </main>
+        </div>
+
+        <div class="page" :class="{ active: currentPage === 'folder'}">
+            <p>folder</p>
+        </div>
+
+    </main>
 
 </body>
