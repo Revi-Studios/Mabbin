@@ -10,7 +10,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "Mabbin - Design Guidlines",
+        "title": "Mabbin",
         "width": 800,
         "height": 600,
         "titleBarStyle": "Overlay"

@@ -1,24 +1,31 @@
+:root{
+  --color: #d0d0d0;
+}
+
 body {
   font-family: 'Inter', sans-serif;
-  margin: 20px;
+  margin: 0px;
   background-color: black;
-  color: white;
+  color: var(--color);
   text-decoration: none;
+  overflow: hidden;
+  font-size: small;
+}
+main {
+  margin: 0px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-
 }
 
 
 a {
   background-color: black;
-  color: white;
+  color: var(--color);
   border: none;
   border-radius: 20px;
-  padding: 6px 16px;
+  padding: 5px 10px;
   display: flex;
-  font-size: 1x;
   max-width: 76px;
   margin: 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -39,9 +46,9 @@ a:hover {
 }
 
 .navbar a {
-  background-color: lrgb(35, 35, 35);
+  background-color:  lrgb(35, 35, 35);
   margin: 10px;
-
+  
 }
 
 .m-button {
@@ -54,18 +61,22 @@ a:hover {
   background-color: #e0e0e0;
 }
 
-.ex-button {
+a.ex-button {
   color: black;
   background-color: white;
   border: 1px solid black;
-  size: 20px;
-  min-width: 80px;
-  min-height: 40px;
+  max-width: 80px;
+  min-height: 30px;
   align-items: center;
+  border-radius: 15px;
 }
 
-.ex-button:hover {
+a.ex-button:hover {
   background-color: #e0e0e0;
+}
+
+a.full-button {
+  max-width: none;
 }
 
 div.rm {
@@ -82,4 +93,20 @@ div.rm {
 a.round-buttons {
   padding: 10px 10px;
   border-radius: 50px;
+}
+
+div.titlebar {
+position: top;
+width: 100vw;
+height: 30px;
+position: sticky;
+margin: 0px;
+}
+
+aside {
+  background-color: #151515;
+  height: 100vw;
+  position: right;
+  width: 200px;
+  border-right: 1px solid #2f2f2f;
 }
