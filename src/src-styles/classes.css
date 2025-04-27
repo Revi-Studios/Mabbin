@@ -63,7 +63,7 @@ div.titlebar {
   height: 30px;
   position: sticky;
   margin: 0px;
-  background-color: #151515;
+  background-color: var(--background-color);
 }
 
 

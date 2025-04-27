@@ -1,21 +1,27 @@
 :root {
-
-  /* Color */
-    --color: #d0d0d0;
-    --black: black;
-    --white: white;
-    --background-color: #151515;
-    --border-color: #2f2f2f;
-
     /* Border radius */
     --border-radius-a: 10px;
     --border-radius-extended-fab: 15px;
     --border-radius-round-buttons: 50px;
     --border-radius-div: 20px;
-    --border-radius-input: 10px;
-
+    --border-radius-input: 20px;
     /*  */
-
-
-
   }
+
+  :root[theme="dark"] {
+      /* Color */
+      --color: #d0d0d0;
+      --black: black;
+      --white: white;
+      --background-color: #151515;
+      --border-color: #2f2f2f;
+  }
+
+  :root[theme="red-light"] {
+    /* Color */
+    --color: #000000;
+    --black: white;
+    --white: black;
+    --background-color: #e33131;
+    --border-color: #e8e8e8;
+}

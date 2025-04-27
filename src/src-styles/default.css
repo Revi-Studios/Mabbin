@@ -36,10 +36,12 @@ span {
 
 input {
     border-radius: var(--border-radius-input);
-    padding: 5px 10px;
+    padding: 10px 20px;
     border: none;
     background-color: var(--background-color);
+    border: 1px solid var(--border-color);
     color: var(--color);
+    display: block;
 }
 
 aside {
