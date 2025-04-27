@@ -15,13 +15,14 @@
     <link rel="stylesheet" href="/src-styles/root.css">
     <link rel="stylesheet" href="/src-styles/default.css">
     <link rel="stylesheet" href="/src-styles/classes.css">
+    <script src="/main.js"></script>
 </head>
 
 <body x-data="{ currentPage: 'home'}">
 
     <div class="titlebar" data-tauri-drag-region></div>
 
-    <main>
+    <div class="main-container">
         <aside>
             <div style="display: flex; padding-left: 10px;">
                 <img src="mabbin-normal.svg" alt="" width="50">
@@ -29,30 +30,41 @@
             </div>
             <a class="ex-button"><span class="material-symbols-rounded">add</span>New</a>
             <div>
-                <a href="#" @click.prevent="currentPage = 'home'" :class="{ 'active': currentPage === 'home' }"
-                    class="full-button selected"><span class="material-symbols-rounded">home</span>Home</a>
-                <a href="#" @click.prevent="currentPage = 'folder" :class="{ 'active: currentPage === 'folder' }"><span
-                        class="material-symbols-rounded">folder</span>Folder</a>
-                <a href="#" @click.prevent="currentPage = 'recent'" :class="{ 'active: currentPage === 'recent' }"><span
-                        class="material-symbols-rounded">search_activity</span>Recent</a>
+                <a href="#" @click.prevent="currentPage = 'home'" :class="{ 'active': currentPage === 'home' }" class="full-button"><span class="material-symbols-rounded">home</span>Home</a>
+                <a href="#" @click.prevent="currentPage = 'folder' " :class="{ 'active': currentPage === 'folder' }" class="full-button"><span class="material-symbols-rounded">folder</span>Folder</a>
+                <a href="#" @click.prevent="currentPage = 'recent'" :class="{ 'active': currentPage === 'recent' }" class="full-button"><span class="material-symbols-rounded">search_activity</span>Recent</a>
             </div>
 
             <div style="bottom: 0px; position: absolute;">
-                <a href="#" class="round-buttons"><span
-                        class="material-symbols-rounded round-buttons">settings</span></a>
+                <a href="#" onclick="NewSettingsWindow()" class="round-buttons"><span class="material-symbols-rounded round-buttons">settings</span></a>
                 <a href="#" class="round-buttons"><span class="material-symbols-rounded round-buttons">logout</span></a>
             </div>
         </aside>
 
-        <div class="page" :class="{ active: currentPage === 'home'}">
-            <p>Home</p>
 
-        </div>
+        <main>
+            <div class="page" :class="{ active: currentPage === 'home'}">
+                <p>Home</p>
+                
+            </div>
 
-        <div class="page" :class="{ active: currentPage === 'folder'}">
-            <p>folder</p>
-        </div>
+            <div class="page" :class="{ active: currentPage === 'folder'}">
+                <p>folder</p>
+            </div>
 
-    </main>
+            <div class="page" :class="{ active: currentPage === 'recent'}">
+                <p>recent</p>
+            </div>
+
+        </main>
+    </div>
 
 </body>
+<script>
+        import { Window } from "@tauri-apps/api/window"
+
+        function NewSettingsWindow() {
+        new Window('Settings')
+        console.log("NewSettingsWindow function was runned.");
+        }
+</script>

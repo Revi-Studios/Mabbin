@@ -5,7 +5,7 @@
  [-] buttons
  [x] logo
 
- [ ] home page
+ [x] home page
  [ ] search bar
  [ ] file fetch cards
  [ ] grid

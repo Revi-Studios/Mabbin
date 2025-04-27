@@ -4,16 +4,16 @@ a.active {
 }
 
 a:hover {
-  border: 1px solid #2f2f2f;
+  background-color: #2f2f2f;
 }
 
-.m-button {
+a.m-button {
   color: black;
   background-color: white;
   border: 1px solid black;
 }
 
-.m-button:hover {
+a.m-button:hover {
   background-color: #e0e0e0;
 }
 
@@ -24,7 +24,7 @@ a.ex-button {
   max-width: 80px;
   min-height: 30px;
   align-items: center;
-  border-radius: 15px;
+  border-radius: var(--border-radius-extended-fab);
 }
 
 a.ex-button:hover {
@@ -38,7 +38,7 @@ a.full-button {
 div.rm {
   background-color: #1d1d1d;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: var(--border-radius-div);
   margin: 20px;
   max-width: min-content;
   align-content: center;
@@ -48,7 +48,7 @@ div.rm {
 
 a.round-buttons {
   padding: 5px 10px;
-  border-radius: 50px;
+  border-radius: var(--border-radius-round-buttons);
   background-color: var(--black);
 }
 
@@ -73,12 +73,12 @@ p.title {
   color: var(--white);
 }
 
-main .page {
-  flex-grow: 1;
-
-}
-
 .page.active {
-  display: block;
-  background-color: var(--color);
+  padding: 20px;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  border-top-left-radius: var(--border-radius-div);
+  background-color: var(--black);
+  border: 1px solid var(--border-color);
 }
