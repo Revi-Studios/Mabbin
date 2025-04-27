@@ -20,8 +20,10 @@
 
 <body x-data="{ currentPage: 'home'}">
 
+    <!-- Title bar -->
     <div class="titlebar" data-tauri-drag-region></div>
 
+    <!-- Side bar -->
     <div class="main-container">
         <aside>
             <div style="display: flex; padding-left: 10px;">
@@ -42,20 +44,23 @@
         </aside>
 
 
+        <!-- Pages -->
         <main>
+            <!-- Home Page -->
             <div class="page" :class="{ active: currentPage === 'home'}">
                 <p>Home</p>
                 
             </div>
-
+            
+            <!-- Folder Page -->
             <div class="page" :class="{ active: currentPage === 'folder'}">
                 <p>folder</p>
             </div>
 
+            <!-- Recent Page -->
             <div class="page" :class="{ active: currentPage === 'recent'}">
                 <p>recent</p>
             </div>
-
         </main>
     </div>
 
