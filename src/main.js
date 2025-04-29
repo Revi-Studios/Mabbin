@@ -12,4 +12,7 @@ async function loadDivContent(url, targetId) {
     }
 }  
 
-loadDivContent('/pages/home.html', 'home-page');
+loadDivContent('/pages/home.html', 'home');
+loadDivContent('/pages/folder.html', 'folder');
+loadDivContent('/pages/recent.html', 'recent');
+loadDivContent('/pages/todo.html', 'todo');

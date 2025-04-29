@@ -35,7 +35,7 @@
                 <a href="#" @click.prevent="currentPage = 'home'" :class="{ 'active': currentPage === 'home' }" class="full-button"><span class="material-symbols-rounded">home</span>Home</a>
                 <a href="#" @click.prevent="currentPage = 'folder' " :class="{ 'active': currentPage === 'folder' }" class="full-button"><span class="material-symbols-rounded">folder</span>Folder</a>
                 <a href="#" @click.prevent="currentPage = 'recent'" :class="{ 'active': currentPage === 'recent' }" class="full-button"><span class="material-symbols-rounded">search_activity</span>Recent</a>
-                <a href="#" @click.prevent="currentPage = 'recent'" :class="{ 'active': currentPage === 'recent' }" class="full-button"><span class="material-symbols-rounded">check</span>Todo</a>
+                <a href="#" @click.prevent="currentPage = 'todo'" :class="{ 'active': currentPage === 'todo' }" class="full-button"><span class="material-symbols-rounded">check</span>Todo</a>
             </div>
 
             <div style="bottom: 0px; position: absolute;">
@@ -47,18 +47,10 @@
 
         <!-- Pages -->
         <main>
-            <!-- Home Page -->
-            <div id="home-page" class="page" :class="{ active: currentPage === 'home'}"></div>
-            
-            <!-- Folder Page -->
-            <div class="page" :class="{ active: currentPage === 'folder'}">
-                <p>folder</p>
-            </div>
-
-            <!-- Recent Page -->
-            <div class="page" :class="{ active: currentPage === 'recent'}">
-                <p>recent</p>
-            </div>
+            <div id="home" class="page" :class="{ active: currentPage === 'home'}"></div>
+            <div id="folder" class="page" :class="{ active: currentPage === 'folder'}"></div>
+            <div id="recent" class="page" :class="{ active: currentPage === 'recent'}"></div>
+            <div id="todo" class="page" :class="{ active: currentPage === 'todo'}"></div>
         </main>
     </div>
 
