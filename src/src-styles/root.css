@@ -5,7 +5,9 @@
     --border-radius-round-buttons: 50px;
     --border-radius-div: 20px;
     --border-radius-input: 20px;
-    /*  */
+
+    --navbar: 30px;
+    --nav-height: calc(100vh - var(--navbar));
   }
 
   :root[theme="dark"] {

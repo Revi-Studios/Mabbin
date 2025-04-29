@@ -60,10 +60,9 @@ span.round-buttons {
 div.titlebar {
   position: top;
   width: 100vw;
-  height: 30px;
+  height: var(--navbar);
   position: sticky;
   margin: 0px;
-  background-color: var(--background-color);
 }
 
 
@@ -77,8 +76,10 @@ p.title {
   padding: 20px;
   display: flex;
   flex-grow: 1;
-  height: 100%;
+  height: var(--nav-height);
   border-top-left-radius: var(--border-radius-div);
   background-color: var(--black);
   border: 1px solid var(--border-color);
+  -webkit-user-select: text;
+  
 }

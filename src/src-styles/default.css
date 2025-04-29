@@ -46,7 +46,7 @@ input {
 
 aside {
     background-color: var(--background-color);
-    height: 100vw;
+    height: var(--nav-height);
     position: right;
     width: 200px;
     display: flex;

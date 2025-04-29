@@ -35,10 +35,11 @@
                 <a href="#" @click.prevent="currentPage = 'home'" :class="{ 'active': currentPage === 'home' }" class="full-button"><span class="material-symbols-rounded">home</span>Home</a>
                 <a href="#" @click.prevent="currentPage = 'folder' " :class="{ 'active': currentPage === 'folder' }" class="full-button"><span class="material-symbols-rounded">folder</span>Folder</a>
                 <a href="#" @click.prevent="currentPage = 'recent'" :class="{ 'active': currentPage === 'recent' }" class="full-button"><span class="material-symbols-rounded">search_activity</span>Recent</a>
+                <a href="#" @click.prevent="currentPage = 'recent'" :class="{ 'active': currentPage === 'recent' }" class="full-button"><span class="material-symbols-rounded">check</span>Todo</a>
             </div>
 
             <div style="bottom: 0px; position: absolute;">
-                <a href="#" onclick="NewSettingsWindow()" class="round-buttons"><span class="material-symbols-rounded round-buttons">settings</span></a>
+                <a href="#" class="round-buttons"><span class="material-symbols-rounded round-buttons">settings</span></a>
                 <a href="#" class="round-buttons"><span class="material-symbols-rounded round-buttons">logout</span></a>
             </div>
         </aside>
@@ -47,10 +48,7 @@
         <!-- Pages -->
         <main>
             <!-- Home Page -->
-            <div class="page" :class="{ active: currentPage === 'home'}">
-                <p>Home</p>
-                
-            </div>
+            <div id="home-page" class="page" :class="{ active: currentPage === 'home'}"></div>
             
             <!-- Folder Page -->
             <div class="page" :class="{ active: currentPage === 'folder'}">
@@ -65,11 +63,3 @@
     </div>
 
 </body>
-<script>
-        import { Window } from "@tauri-apps/api/window"
-
-        function NewSettingsWindow() {
-        new Window('Settings')
-        console.log("NewSettingsWindow function was runned.");
-        }
-</script>
